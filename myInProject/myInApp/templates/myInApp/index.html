@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myInApp/css/index.css' %}">
+</head>
+<body>
+<nav>
+    {% load static %}
+    <a href="{% url 'index' %}"><img src="{% static 'myInApp/images/CodeCrew.png' %}" alt="CodeCrewLogo"></a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'resources' %}">Resources</a>
+    <a href="{% url 'contacts' %}">Contacts</a>
+</nav>
+{% block header %}
+<div>
+    <h2>WELCOME TO CODE SCHOOL</h2>
+</div>
+{% endblock %}
+
+{% block content %}
+<p>Our Code School is a hands-on class designed to train individuals to be entry-level software developers within a six-month course. The minimum education requirement is at least a high school diploma or GED. Students work in a small classroom setting and use real-word technologies to learn the fundamentals of coding, app development, the leadership, and the life skills needed for a successful career and job market competitiveness.</p>
+ <h3>FREQUENTLY ASKED QUESTIONS:</h3>
+<h4>Do I need money to attend Code School?</h4>
+<p>CodeCrew Code School has no upfront costs.  Upon graduation and landing employment, students enter into an income sharing agreement where CodeCrew receives a small percentage of their salary for three years,  only if that salary exceeds a monthly rate equivalent to $35,000 annually. CodeCrew is a non-profit, 501(c)(3) organization that does not seek profits, but instead simply seeks to earn enough revenue to help sustain the program for future graduates.</p>
+<h4>Do I need a computer?</h4>
+<p>CodeCrew Code School provides each of its students a laptop computer fully equipped with everything required to participate in the class, for the exclusive use by the students during the six month class period.  Laptops are returned to the Code School upon graduation.  While laptops are provided to all students, any student with their own laptop is welcome to use it instead, as long as it meets the minimum system requirements.</p>
+<h4>What is the median starting salary for a software engineer in Memphis?</h4>
+<p>The median starting salary for a software engineer in Memphis is just over $61,000 annually according to Salary.com.  Please note that starting salaries range above and below this figure and depend on a number of factors, most especially that of the individual seeking employment.</p>
+{% endblock %}
+
+<hr>
+
+{% block footer %}
+<div class="footer">
+<p>88 Union Avenue, 2nd Floor, Memphis, TN 38103 |<span>901-229-1720</span>|</p>
+    <a href="#">team@code-crew.org</a>| <span class="colorRed"><i>#GritGrindCode</i></span>
+</div>
+{% endblock %}
+</body>
+</html>

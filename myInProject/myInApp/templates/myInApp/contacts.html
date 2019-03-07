@@ -1,0 +1,13 @@
+{% extends 'myInApp/index.html' %}
+
+{% block header %}
+<h2>Contact Us</h2>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button>Submit</button>
+</form>
+{% endblock %}

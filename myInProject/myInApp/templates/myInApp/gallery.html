@@ -1,0 +1,12 @@
+{% extends 'myInApp/index.html' %}
+
+{% block header %}
+<h2>CodeCrew Gallery</h2>
+{% endblock %}
+{% block content %}
+{% load static %}
+<img src="{% static 'myInApp/images/crew1.png' %}" alt='codecrew'/>
+<img src="{% static 'myInApp/images/Crew2.png' %}" alt='codecrew'/>
+<img src="{% static 'myInApp/images/crew3.png' %}" alt='codecrew'>
+<img src="{% static 'myInApp/images/Crew4.JPG' %}" alt='codecrew'>
+{% endblock %}
